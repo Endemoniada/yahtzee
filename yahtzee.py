@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """Yahtzee, the board game!
 
 This python program will simulate a game of Yahtzee
