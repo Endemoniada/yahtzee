@@ -65,7 +65,7 @@ class Hand(object):
                 if reroll.lower() == "all":
                     reroll = list(range(1, 6))
                 else:
-                # Perform some clean-up of input
+                    # Perform some clean-up of input
                     reroll = reroll.replace(" ", "")  # Remove spaces
                     reroll = re.sub('[^0-9,]', '', reroll)  # Remove non-numerals
                     reroll = reroll.split(",")  # Turn string into list
@@ -262,8 +262,8 @@ class ScoreBoard(object):
         for idx, row in self.scoreboard_rows.items():
             try:
                 print("{:<2} {:<21}| {:2} points".format(idx+1,
-                    row,
-                    self.__scoreboard_points[idx]))
+                      row,
+                      self.__scoreboard_points[idx]))
             except KeyError:
                 print("{:<2} {:<21}|".format(idx+1, row))
         print("===================================")
@@ -280,7 +280,7 @@ class ScoreBoard(object):
                 scoreboard_row = False
                 continue
             try:
-                scoreboard_row = int(re.sub('[^0-9,]', '', scoreboard_row))  # Remove non-numerals
+                scoreboard_row = int(re.sub('[^0-9,]', '', scoreboard_row))
             except ValueError:
                 print("You entered something other than a number.")
                 print("Please try again")
@@ -295,26 +295,6 @@ class ScoreBoard(object):
                     int(scoreboard_row),
                     Rules().rules_map[int(scoreboard_row)](hand)
                 )
-
-
-
-
-
-        # msg = "Choose which scoring to use "\
-        #        "(leave empty to show available rows): "
-        # scoreboard_row = input(msg)
-        # score_saved = False
-        # while not score_saved:
-        #     while not scoreboard_row:
-        #         self.show_scoreboard_rows()
-        #         scoreboard_row = input(msg)
-        #         # TODO: sanitize input
-        #
-        #     score_saved = self.set_scoreboard_row_value(
-        #         int(scoreboard_row),
-        #         Rules().rules_map[int(scoreboard_row)](hand)
-        #     )
-        #     print(score_saved)
 
 
 def Main():
