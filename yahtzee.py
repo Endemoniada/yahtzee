@@ -261,11 +261,11 @@ class ScoreBoard(object):
         print("===================================")
         for idx, row in self.scoreboard_rows.items():
             try:
-                print("{:<2} {:<21}| {:2} points".format(idx+1,
+                print("{:<2} {:<21}| {:2} points".format(idx,
                       row,
                       self.__scoreboard_points[idx]))
             except KeyError:
-                print("{:<2} {:<21}|".format(idx+1, row))
+                print("{:<2} {:<21}|".format(idx, row))
         print("===================================")
 
     def select_scoring(self, hand):
