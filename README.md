@@ -67,3 +67,7 @@ Score:  50
 *Chance*
 Dice:   Any combination
 Score:  Sum of all dice
+
+# Testing
+To run unittest test cases on the code, execute the following:
+`python test_yahtzee.py`
