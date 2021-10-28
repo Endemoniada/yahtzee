@@ -1,5 +1,7 @@
 import unittest
-from yahtzee import *
+
+from hand import Hand
+from rules import Rules
 
 
 class HandTestCase(unittest.TestCase):
